@@ -1,0 +1,10 @@
+{
+  "name": "dead-links-scraper",
+  "version": "3.0.0",
+  "description": "Find dead Discord/Telegram links on CoinMarketCap, CoinGecko and DexScreener and report where on the page they sit",
+  "main": "dead_links_scraper.js",
+  "scripts": { "start": "node dead_links_scraper.js" },
+  "dependencies": { "axios": "^1.7.0" },
+  "optionalDependencies": {},
+  "license": "MIT"
+}
