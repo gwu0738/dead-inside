@@ -106,7 +106,7 @@ output/
 | Column | Meaning |
 |---|---|
 | `priority` | `P1_NO_WORKING_COMMUNITY_LINK` (page has no working Discord/Telegram at all), `P2_DEAD_LINK_IS_DISPLAYED` (visitors see and click it, but a working alternative exists), `P3_DEAD_LINK_IS_HIDDEN` (in a dropdown or not rendered) |
-| `category` | `DISCORD_EXPIRED` (Discord code 50270), `DISCORD_INVALID` (code 10006: revoked / server gone / never existed), `TELEGRAM_NOT_FOUND` (username doesn't exist, claimable), `TELEGRAM_INVITE_INVALID` (private `+`/`joinchat` link revoked) |
+| `category` | `DISCORD_EXPIRED` (Discord code 50270), `DISCORD_INVALID` (code 10006: revoked / server gone / never existed), `TELEGRAM_NOT_FOUND` (username resolves to nothing; re-registering it may be refused by Telegram), `TELEGRAM_INVITE_INVALID` (private `+`/`joinchat` link revoked) |
 | `dead_link`, `reason` | the link and the exact reason returned by Discord / parsed from t.me |
 | `project`, `symbol`, `rank`, `market_cap_usd`, `chain` | project identity |
 | `source_site`, `source_page_url` | CMC / COINGECKO / DEXSCREENER and the page the link was found on |

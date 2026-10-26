@@ -236,7 +236,7 @@ function buildReports({ outDir, all, dead, perPage = 10, opts = {}, categoryLabe
 <dt>P3</dt><dd>The dead link is hidden in a dropdown or only stored in the site's data – low visitor impact, still worth fixing.</dd>
 <dt>Discord invite expired</dt><dd>Discord answered code 50270: the invite had a time limit or max uses and ran out.</dd>
 <dt>Discord invite invalid</dt><dd>Discord answered code 10006 "Unknown Invite": the invite was deleted, the server is gone, or the code never existed.</dd>
-<dt>Telegram username does not exist</dt><dd>t.me shows the "Telegram: Contact @…" placeholder – nobody owns that name (so anyone could claim it).</dd>
+<dt>Telegram username does not exist</dt><dd>t.me shows the "Telegram: Contact @…" placeholder – the name currently resolves to no channel, group or user, so visitors land in an empty chat. Whether it can be re-registered is up to Telegram (recently released or reserved names are refused as "invalid").</dd>
 <dt>Telegram private invite revoked</dt><dd>t.me/+… or /joinchat/… link no longer resolves to a group.</dd>
 <dt>Visible / Below the fold / Hidden in dropdown / Not rendered</dt><dd>Where the link sits on the source page at 1440×900: shown on load; shown after scrolling; shown only after clicking a "more" control; present in the site's data but never drawn on the page.</dd></dl>
 <p style="margin:10px 0 0;color:var(--muted)">Run started ${esc(startedAt || "")} · options: CMC ${esc(opts.cmc)} from rank ${esc(opts.cmcStart)}, CoinGecko ${esc(opts.cg)} from rank ${esc(opts.cgStart)}, DexScreener ${opts.dex ? "on" : "off"}. Detail pages: ${Array.from({ length: totalPages }, (_, i) => `<a href="${fileName(i + 1)}">${i + 1}</a>`).join(" · ")}</p></div>`;
